@@ -3,8 +3,8 @@ import React from "react";
 const Main = () => {
     return(
       <>
-          <title>main app</title>
-          <div>Main</div>
+          <title>hello</title>
+          <div>hello</div>
       </>
     )
 }
