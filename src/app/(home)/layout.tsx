@@ -4,15 +4,12 @@ import {Navbar} from "@/app/(home)/components";
 
 const Layout = ({children}: ChildProps) => {
     return(
-      <>
-          <title>Layout app</title>
-          <div className={'layout__cl'}>
+          <div className={'layout__cl h-full'}>
               <Navbar/>
-              <main>
+              <main className={"h-full pt-40"}>
                   {children}
               </main>
           </div>
-      </>
     )
 }
 export default Layout;
