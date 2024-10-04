@@ -6,6 +6,7 @@ import {ModeToggle} from "@/shared/mode-toggle";
 import {Button} from "@/components/ui/button";
 import {useScrolled} from "@/hooks/use-scrolled";
 import {cn} from "@/lib/utils";
+import {SignInButton} from "@clerk/clerk-react";
 
 export const Navbar = () => {
     const scrolled = useScrolled();
@@ -16,8 +17,12 @@ export const Navbar = () => {
               )}>
               <Logo/>
               <div className={"flex items-center gap-x-2"}>
-                  <Button size={"sm"} variant={"ghost"}>Log in</Button>
-                  <Button size={"sm"}>Get free</Button>
+                  <SignInButton mode={"modal"}>
+                    <Button size={"sm"} variant={"ghost"}>Log in</Button>
+                  </SignInButton>
+                  <SignInButton mode={"modal"}>
+                    <Button size={"sm"}>Get free</Button>
+                  </SignInButton>
                   <ModeToggle/>
               </div>
           </div>

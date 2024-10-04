@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import {ThemeProvider} from "@/components/providers/theme-provider";
+import {ConvexProvider} from "@/components/providers/convex-provider";
 
 
 export const metadata: Metadata = {
@@ -16,15 +17,17 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-      <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-            storageKey="notion-theme"
-      >
-          {children}
-      </ThemeProvider>
+      <ConvexProvider>
+          <ThemeProvider
+                attribute="class"
+                defaultTheme="system"
+                enableSystem
+                disableTransitionOnChange
+                storageKey="notion-theme"
+          >
+              {children}
+          </ThemeProvider>
+      </ConvexProvider>
       </body>
     </html>
   );
